@@ -1,0 +1,16 @@
+<section>
+    <div class="user-card" *ngIf="user">
+    <h2>User Info</h2>
+    <p><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+    <p><strong>Address:</strong> {{ user.address }}</p>
+    <p><strong>Zipcode:</strong> {{ user.zipcode }}</p>
+    <p><strong>Age:</strong> {{ user.age }}</p>
+    <p><strong>Gender:</strong> {{ user.gender }}</p>
+    <div *ngIf="user.avatar">
+        <strong>Avatar:</strong><br>
+        <img [src]="user.avatar" alt="Avatar" width="100" height="100">
+    </div>
+    </div>
+</section>

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Tagesschrift&display=swap');
+
+
+
+td{
+    font-family:"Tagesschrift" ;
+    font-size: 20px;
+}
+td button{
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+
+table button{
+ border: none;
+}
+
+img{
+    width: 70px;
+}
+
+.table{
+    max-width: 100%;
+}
+.priceall{
+     animation: priceall 1.5s infinite alternate;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: center;
+    font-family: merienda;
+}
+.columntr h1{
+    display: none;
+}
+
+@keyframes priceall {
+    0% {
+      color: red;
+    }
+   
+    100% {
+      color: rgb(0, 0, 0);
+    }
+  }
+
+
+
+@media only screen and (max-width:500px) {
+   table{
+    display: flex;
+    flex-direction: column;
+   }
+.columntr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.columntr h1{
+   display: flex;
+   justify-content: center;
+}
+.columntr td{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+thead{
+    display: none;
+}
+ 
+}

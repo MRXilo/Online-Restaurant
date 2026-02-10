@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Tagesschrift&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+nav{
+   background-color: black;
+    color: white;
+    width: 100%;
+    min-height: 100px;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 30px;
+    font-family: "Tagesschrift";
+    filter: opacity(85%);
+}
+
+nav:hover{
+    background-color: black;
+    filter: opacity(100%);
+}
+i:hover{
+  color: red;
+}
+ul{
+    opacity: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    text-decoration: none;
+    gap: 30px;
+    list-style-type: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding-top: 15px;
+}
+li:hover{
+    color: red;
+}
+section{
+    padding-top: 50px;
+    font-family: "Dancing Script";
+    
+}
+h1 {
+    transition: color 3s ease-in-out;
+  }
+.background{
+   
+    background-image: url(https://flipdish.imgix.net/KHX5M4wBxbwX0lNBf5VOlHAlpu0.jpg);
+    max-width:  1640px;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: auto ;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+}
+
+
+
+.blinking-text {
+    animation: blinkColor 1.5s infinite alternate;
+  }
+  
+  @keyframes blinkColor {
+    0% {
+      color: red;
+    }
+   
+    100% {
+      color: white;
+    }
+  }
+ 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  box-shadow: 0 2px 5px rgb(0, 0, 0);
+  position: relative;
+  display: none;
+}
+
+.navbar img {
+  height: 60px;
+}
+
+ul.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+ul.menu li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+ul.menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  padding-left: 20px;
+}
+
+@media (max-width: 514px) {
+  .burger {
+    display: block;
+  }
+  .navbar{
+    display: flex;
+    color: white;
+  }
+
+  ul.menu {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    background-color: white;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: none;
+    z-index: 999;
+  }
+  nav{
+    display: none;
+  }
+
+  ul.menu.open {
+    display: flex;
+  }
+
+
+
+
+
+
+
+ li{
+    display: none;
+   
+   }
+   .background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+
+   .blinking-text{
+     font-size: 30px;
+     padding-left: 32px;
+   }
+  }
+
+
+
+
+
+
+
+
+
+
+

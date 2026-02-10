@@ -1,0 +1,44 @@
+
+
+    <nav>
+        <img width="120"  src="https://us.123rf.com/450wm/asmaparin/asmaparin2408/asmaparin240800552/234480922-restaurant-logo-template-with-chef-hat-spoon-and-fork.jpg?ver=6" alt="">
+        <ul>
+            <li></li>
+            <i routerLink="/registr" class="fa-regular fa-registered"></i>
+            <i routerLink="/" class="fa-solid fa-house-user"> </i> <li routerLink="/"> Home</li>
+            <li routerLink="/cart">Cart </li><i routerLink="/cart" class="fa-solid fa-cart-plus"></i>
+        </ul>
+    </nav>
+<nav class="navbar">
+  
+
+  <button class="burger" (click)="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <ul class="menu" [class.open]="menuOpen">
+    <li>
+      <i class="fa-solid fa-house-user"></i>
+      <a routerLink="/">Home</a>
+    </li>
+    <li>
+      <i class="fa-regular fa-registered"></i>
+      <a routerLink="/registr">Register</a>
+    </li>
+    <li>
+      <i class="fa-solid fa-cart-plus"></i>
+      <a routerLink="/cart">Cart</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<section>
+
+<div class="background">
+    <h1 class="blinking-text">Fast And Efficient Online Ordering You Must Try</h1>
+</div>
+
+
+</section>

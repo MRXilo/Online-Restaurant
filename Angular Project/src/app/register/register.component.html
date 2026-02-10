@@ -1,0 +1,70 @@
+
+ 
+ <section>
+     <div class="formArea">
+    <app-login></app-login>
+  </div>
+    
+   <form [formGroup]="registerFormInfo" (ngSubmit)="register()">
+    <h1>REGISTRATION</h1>
+        <div class="mainArea">
+        <div class="left">
+            <div class="area">
+            <label for="">firstName</label>
+            <input type="text" formControlName="firstName">
+            </div>
+            <div class="area">
+            <label for="">lastName</label>
+            <input type="text" formControlName="lastName">
+            </div>
+            <div class="area">
+            <label for="">email</label>
+            <input type="email" formControlName="email">
+            </div>
+            <div class="area">
+            <label for="">password</label>
+            <input type="password" formControlName="password">
+            </div>
+            <div class="area">
+            <label for="">address</label>
+            <input type="text" formControlName="address">
+            </div>
+        </div>
+        <div class="right">
+        <div class="area">
+            <label for="">phone</label>
+            <input type="text" formControlName="phone">
+        </div>
+        <div class="area">
+            <label for="">zipcode</label>
+            <input type="text" formControlName="zipcode">
+        </div>
+        <div class="area">
+            <label for="">avatar</label>
+            <input type="text" formControlName="avatar">
+        </div>
+        <div class="area">
+            <label for="">age</label>
+            <input type="text" formControlName="age">
+        </div>
+        <div class="area">
+            <label for="">Gender</label>
+        <select formControlName="gender">
+            <option value="">Choose your gender...</option>
+            <option value="MALE">Male</option>
+            <option value="FEMALE">Female</option>
+            <option value="OTHER">Other</option>
+        </select>
+        </div>
+        </div>
+        </div>
+        
+        <button type="submit">Register</button>
+    </form>
+   <app-user-info *ngIf="isRegistered"  [user]="userData"></app-user-info>
+
+</section>  
+
+
+
+

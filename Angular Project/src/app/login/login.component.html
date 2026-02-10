@@ -1,0 +1,17 @@
+                
+
+<form [formGroup]="loginFormInfo" (ngSubmit)="login()">
+    <h1>LOG IN</h1>
+    <div class="area">
+      <label for="">email</label>
+      <input type="email" formControlName="email" >
+    </div>
+    <div class="area">
+      <label for="">password</label>
+      <input type="password" formControlName="password" >
+    </div>
+    <button type="submit">Log In</button>
+  </form>
+<app-user-info *ngIf="userData" [user]="userData"></app-user-info>
+
+<app-user-info *ngIf="isLoggedIn" [user]="loginForm.value"></app-user-info>

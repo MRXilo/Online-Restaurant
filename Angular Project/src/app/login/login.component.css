@@ -1,0 +1,64 @@
+form {
+    max-width: 600px;
+    box-shadow: 0 0 20px 2px grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Tagesschrift";
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+
+
+
+
+
+
+form:hover{
+     transform: translateY(-10px);
+      box-shadow:0 5px 25px 5px red ;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form .mainArea {
+    display: flex;
+    gap: 30px;
+}
+button:hover{
+    background-color: red;
+    color: black;
+}
+.left, .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, button, select {
+    height: 35px;
+   
+}
+
+button{
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

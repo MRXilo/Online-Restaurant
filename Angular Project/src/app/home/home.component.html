@@ -1,0 +1,56 @@
+
+
+    <ul>
+        <li [class.archeuli]="activeCategory == 0" (click)="showAllProducts()">All</li>
+        @for (item of categories; track $index) { 
+            <li [class.archeuli]="activeCategory == item.id" (click)="filterByCategory(item.id)">{{item.name}}</li>
+        }
+    </ul>
+
+
+
+
+
+<section>
+
+  <div class="filter-box">
+  <h3>Filter</h3>
+
+  <label>Spiciness: {{ spiciness === null ? 'Not Chosen' : spiciness }}</label>
+  <input type="range" min="0" max="5" [(ngModel)]="spiciness" />
+
+  <label>
+    <input type="checkbox" [(ngModel)]="noNuts"> No Nuts
+  </label>
+
+  <label>
+    <input type="checkbox" [(ngModel)]="vegetarian"> Vegetarian Only
+  </label>
+
+  <button (click)="resetFilter()">RESET</button>
+  <button (click)="applyFilter()">APPLY FILTER</button>
+</div>
+
+    @for (item of foodList; track $index) {
+        <div class="card" style="width: 18rem;">
+            <img [src]="item.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              
+              <p> Spiciness:{{item.spiciness}}</p>
+              <span [style.color]="item.nuts ? 'green' : 'red'">
+                {{ item.nuts ? ' NUTS ✅ ' : ' NUTS❌ ' }}
+              </span>
+              <span [style.color]="item.vegeterian ? 'green' : 'red'" style="margin-left: 10px;">
+                {{ item.vegeterian ? ' VEGETARIAN🌿 ' : ' VEGETARIAN ❌' }}
+              </span>
+              <div class="price">
+                <button (click)="addToCart(item.price, item.id)">Add To Cart</button>
+                <p class="card-text">{{item.price }}$</p>
+             </div>
+            </div>
+          </div>
+
+          
+    }
+</section>

@@ -1,0 +1,39 @@
+
+
+
+<h1>{{info}}</h1>
+<section>
+  <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Image</th>
+          <th scope="col-ok">Name</th>
+          <th scope="col">quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+          @for (item of cartList; track $index) {
+              
+                  <tr class="columntr">
+                  
+                      <th scope="row"> <img width="30" [src]="item.product.image" alt=""> </th>
+                      <td>{{item.product.name}}</td>
+                  
+                      <td> <button (click)="increase(item)">+</button> {{item.quantity}} <button [disabled]="item.quantity == 1" (click)="decrease(item)">-</button></td>
+                      <td> <h1>price</h1>{{item.price}}$</td>
+                      <td> <h1>total price </h1>{{item.price * item.quantity}}$</td>
+                      <td> <button (click)="deleteItem(item.product.id)">REMOVE</button> </td>
+                  </tr>
+            
+          }
+        
+          <h1 class="priceall">{{allPrice}}$ </h1>
+      </tbody>
+    </table>
+</section>
+
+
